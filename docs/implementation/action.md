@@ -2,11 +2,13 @@
 
 <br/>
 
-📂 [Voir le code source](../../packages/plugin-workshop-42blockchain/src/actions/getBalance.ts)
+Ce document détaille l'implémentation de l'action `getBalance` qui est le cœur de notre plugin.
 
 <br/>
 
-Ce document détaille l'implémentation de l'action `getBalance` qui est le cœur de notre plugin.
+
+
+📂 [Voir le code source](../../packages/plugin-workshop-42blockchain/src/actions/getBalance.ts)
 
 <br/>
 
@@ -152,7 +154,7 @@ handler: async (
     }
 }
 ```
-
+📂 [Voir le code source](../../packages/plugin-workshop-42blockchain/src/actions/getBalance.ts)
 <br/>
 
 ### Étapes Détaillées du Handler
