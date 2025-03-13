@@ -1,10 +1,16 @@
 # 🎯 Implémentation de l'Action getBalance
 
+<br/>
+
 📂 [Voir le code source](../../packages/plugin-workshop-42blockchain/src/actions/getBalance.ts)
+
+<br/>
 
 Ce document détaille l'implémentation de l'action `getBalance` qui est le cœur de notre plugin.
 
-## Structure Complète
+<br/>
+
+## Importation
 
 ```typescript
 import {
@@ -22,6 +28,8 @@ import {
 } from "@elizaos/core";
 ```
 
+<br/>
+
 ## Composants Interconnectés
 
 L'action utilise plusieurs composants qui travaillent ensemble :
@@ -29,6 +37,8 @@ L'action utilise plusieurs composants qui travaillent ensemble :
 - [🎮 Service API](./service.md) - Gère les appels à l'API XRP
 - [📝 Templates](./templates.md) - Définit le format des réponses
 - [📚 Exemples](./examples.md) - Configure le comportement de l'agent
+
+<br/>
 
 ## Configuration de l'Action
 
@@ -50,7 +60,12 @@ export const getBalance: Action = {
 ### Similes
 Les similes sont des mots-clés alternatifs qui peuvent déclencher l'action. Ils permettent à l'agent de reconnaître différentes formulations de la même demande.
 
+<br/>
+
 ## Validation
+
+Permet de valider que l'action peut être exécutée normalement.
+Ici on a décidé de mettre un REGEX pour valider l'addr wallet, mais on aurait pu mettre beaucoup plus de choses (Validation de mots clefs, var d'environnement...).
 
 ```typescript
 validate: async (runtime: IAgentRuntime, message: Memory) => {
@@ -64,6 +79,8 @@ La fonction `validate` :
 - Vérifie si le message contient une adresse XRP valide
 - Utilise une regex pour valider le format : `r[A-Za-z0-9]{24,34}`
 - Retourne `true` uniquement si une adresse valide est trouvée
+
+<br/>
 
 ## Handler Principal
 
@@ -136,6 +153,8 @@ handler: async (
 }
 ```
 
+<br/>
+
 ### Étapes Détaillées du Handler
 
 1. **Extraction de l'Adresse**
@@ -166,43 +185,7 @@ handler: async (
    - Utilise le callback pour envoyer la réponse
    - Lie la réponse au message original avec `inReplyTo`
 
-## Gestion des Erreurs
-
-```typescript
-try {
-    // ... code ...
-} catch (error: any) {
-    elizaLogger.error("Erreur dans le handler du plugin XRP:", error);
-    if (callback) {
-        callback({
-            text: `Une erreur est survenue lors de la récupération du solde. Veuillez réessayer plus tard.`
-        });
-    }
-    return false;
-}
-```
-
-- Utilise `elizaLogger` pour le logging des erreurs
-- Fournit un message d'erreur clair à l'utilisateur
-- Retourne `false` pour indiquer l'échec de l'action
-
-## Points Importants
-
-1. **Validation Robuste**
-   - Double validation (validate + handler)
-   - Regex précise pour les adresses XRP
-
-2. **Gestion du State**
-   - Mise à jour cohérente du state
-   - Utilisation pour le contexte de réponse
-
-3. **Gestion du Contexte**
-   - Création de mémoire pour la conversation
-   - Liaison des messages avec `inReplyTo`
-
-4. **Performance**
-   - Utilisation de `ModelClass.SMALL`
-   - Logging approprié pour le debugging
+<br/>
 
 ## Liens Connexes
 
