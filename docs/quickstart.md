@@ -4,27 +4,23 @@
 
 Avant de commencer ce workshop, assurez-vous d'avoir installé :
 
-- **Node.js** (version 16 ou supérieure)
-- **pnpm** (gestionnaire de paquets plus rapide et plus efficace que npm)
-- **TypeScript** (connaissance de base requise)
-- **Git** (pour la gestion du code source)
+- **Node.js** 
+- **pnpm** (Arrêtez avec NPM, par pitié ! c'est de la merde)
+- **JS / TypeScript** (connaissance requise)
 
 ## Installation
 
 1. **Clonez le repository**
 ```bash
-git clone https://github.com/votre-username/plugin-workshop-42blockchain.git
-cd plugin-workshop-42blockchain
+# Version final du plugin
+git clone https://github.com/MathysCogne/workshop_elizaos_42blockchain
+# ou juste la struture du plugin vierge afin de pratiquer !
+git clone https://github.com/MathysCogne/workshop_elizaos_42blockchain
 ```
 
-2. **Installez les dépendances**
+3. **Installez les dépendances**
 ```bash
 pnpm install --no-frozen-lockfile
-```
-
-3. **Linkez votre plugin**
-```bash
-pnpm link [votre-plugin]
 ```
 
 ## Premier Lancement
@@ -44,17 +40,19 @@ pnpm start:client
 pnpm start --character="characters/workshop.character.json"
 ```
 
-## Vérification de l'Installation
+## Vérification de l'Installation (Si vous avez installer la version final du plugin)
 
-Pour vérifier que tout fonctionne correctement, essayez cette commande dans l'interface :
+Pour vérifier que tout fonctionne correctement, envoyer ces message a l'agent IA :
 ```
-Quel est le solde du wallet rNZ2ZVF1ZU34kFQvcN4xkFAvdSvve5bXce?
+1. Salut Bob !
+--
+2. Quel est le solde du wallet [addr wallet xpr] ?
 ```
 
 Vous devriez recevoir une réponse contenant le solde du wallet.
 
 ## Prochaines Étapes
 
-- [📁 Découvrez la structure du projet](./project-structure.md)
+- [📁 Découvrez la structure du plugin](./project-structure.md)
 - [🎭 Configurez votre character](./character-config.md)
 - [🔧 Implémentez votre premier plugin](./plugin-implementation.md) 
