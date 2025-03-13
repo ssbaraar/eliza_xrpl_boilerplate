@@ -1,5 +1,7 @@
 # 🚀 Démarrage Rapide
 
+<br/>
+
 ## Prérequis
 
 Avant de commencer ce workshop, assurez-vous d'avoir installé :
@@ -7,6 +9,8 @@ Avant de commencer ce workshop, assurez-vous d'avoir installé :
 - **Node.js** 
 - **pnpm** (Arrêtez avec NPM, par pitié ! c'est de la merde)
 - **JS / TypeScript** (connaissance requise)
+
+<br/>
 
 ## Installation
 
@@ -40,6 +44,8 @@ pnpm start:client
 pnpm start --character="characters/workshop.character.json"
 ```
 
+<br/>
+
 ## Vérification de l'Installation (Si vous avez installer la version final du plugin)
 
 Pour vérifier que tout fonctionne correctement, envoyer ces message a l'agent IA :
@@ -50,6 +56,8 @@ Pour vérifier que tout fonctionne correctement, envoyer ces message a l'agent I
 ```
 
 Vous devriez recevoir une réponse contenant le solde du wallet.
+
+<br/>
 
 ## Prochaines Étapes
 
