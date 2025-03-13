@@ -1,17 +1,14 @@
 # 🎭 Configuration du Character
 
+<br/>
+
 Le character file est un élément crucial qui définit la personnalité et le comportement de votre agent ElizaOS.
 
-## ⚙️ Prérequis
+Je vous invite a lire la documentation complete:
 
-1. **Configuration de l'Environnement**
-   ```bash
-   cp .env.example .env
-   ```
+[Documentation Character File](https://elizaos.github.io/eliza/docs/core/characterfile)
 
-2. **Configuration du Provider AI**
-   Dans le fichier `.env`, ajoutez votre clé API:
-
+<br/>
 
 ## 📄 Structure du Character File
 
@@ -30,12 +27,18 @@ Notre character file `characters/workshop.character.json` est configuré comme s
 }
 ```
 
+<br/>
+
 ### 🔍 Analyse des Composants
+
+<br/>
 
 1. **Informations de Base**
    - `name`: "Bob le Crypto" - Le nom affiché de notre agent
    - `modelProvider`: "groq" - Utilise Groq comme provider AI
    - `plugins`: Liste des plugins, incluant notre plugin workshop
+
+<br/>
 
 2. **Bio et Personnalité**
    ```json
@@ -48,6 +51,8 @@ Notre character file `characters/workshop.character.json` est configuré comme s
    ```
    Ces éléments définissent la personnalité décontractée et accessible de Bob.
 
+<br/>
+
 3. **Historique (Lore)**
    ```json
    "lore": [
@@ -58,6 +63,8 @@ Notre character file `characters/workshop.character.json` est configuré comme s
    ]
    ```
    Le lore enrichit le background et la personnalité de Bob.
+
+<br/>
 
 4. **Connaissances**
    ```json
@@ -71,6 +78,8 @@ Notre character file `characters/workshop.character.json` est configuré comme s
    ]
    ```
    Définit les domaines d'expertise de Bob.
+
+<br/>
 
 5. **Exemples de Messages**
    ```json
@@ -93,6 +102,8 @@ Notre character file `characters/workshop.character.json` est configuré comme s
    ```
    Ces exemples guident le style de communication de Bob.
 
+<br/>
+
 6. **Style de Communication**
    ```json
    "style": {
@@ -112,6 +123,8 @@ Notre character file `characters/workshop.character.json` est configuré comme s
    ```
    Définit le ton et le style de communication dans différents contextes.
 
+<br/>
+
 7. **Adjectifs Caractéristiques**
    ```json
    "adjectives": [
@@ -126,12 +139,7 @@ Notre character file `characters/workshop.character.json` est configuré comme s
    ```
    Ces adjectifs renforcent la personnalité de Bob.
 
-## 🎯 Impact sur le Comportement
-
-- **Style Décontracté**: Bob utilise un langage familier et des émojis
-- **Expertise Accessible**: Explique des concepts techniques simplement
-- **Personnalité Cohérente**: Maintient un ton amical et décontracté
-- **Réponses Naturelles**: Combine expertise technique et style décontracté
+<br/>
 
 ## 🔄 Prochaines Étapes
 
