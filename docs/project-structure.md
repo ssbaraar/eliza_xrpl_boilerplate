@@ -1,4 +1,4 @@
-# 📁 Structure du Projet
+# 📁 Découvrez la structure du plugin
 
 ## Architecture du Plugin
 
