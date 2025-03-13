@@ -1,10 +1,42 @@
 # 🔧 Implémentation du Plugin
 
+<br/>
+
 Cette section détaille l'implémentation complète du plugin getBalance pour ElizaOS.
+
+<br/>
+
+## Point d'Entrée du plugin (src/index.ts)
+
+```typescript
+import { type Plugin } from "@elizaos/core";
+import getBalance from "./actions/getBalance";
+
+export const workshop42BlockchainPlugin: Plugin = {
+    name: "@elizaos-plugins/plugin-workshop-42blockchain",
+    description: "Plugin de démonstration pour le workshop 42 Blockchain",
+    actions: [getBalance], // Action que l'on vas creer ensemble.
+    providers: [],
+    evaluators: [],
+    services: [],
+    clients: [],
+    adapters: []
+};
+
+export { workshop42BlockchainPlugin as default };
+```
+
+
 
 ## 📂 Structure Détaillée
 
+<br/>
+
 L'implémentation est divisée en plusieurs composants interconnectés :
+
+<br/>
+
+[📁 Reour au details de la structure du plugin au besoin](https://github.com/MathysCogne/workshop_elizaos_42blockchain/blob/ex/docs/project-structure.md)
 
 1. [🎯 Action getBalance](./implementation/action.md)
    - Structure complète de l'action
@@ -30,6 +62,8 @@ L'implémentation est divisée en plusieurs composants interconnectés :
    - Variables dynamiques
    - Patterns de reconnaissance
 
+<br/>
+
 ## 🔄 Flux d'Exécution
 
 1. L'utilisateur envoie une requête contenant une adresse XRP
@@ -37,6 +71,8 @@ L'implémentation est divisée en plusieurs composants interconnectés :
 3. Le service API interroge le réseau XRP
 4. Les données sont formatées via les templates
 5. Une réponse naturelle est générée et envoyée
+
+<br/>
 
 ## 📦 Code Source
 
@@ -48,25 +84,9 @@ Le code source complet est disponible dans le dossier `packages/plugin-workshop-
 
 Pour plus de détails sur chaque composant, consultez les sections correspondantes ci-dessus.
 
-## Point d'Entrée (src/index.ts)
+<br/>
 
-```typescript
-import { type Plugin } from "@elizaos/core";
-import getBalance from "./actions/getBalance";
 
-export const workshop42BlockchainPlugin: Plugin = {
-    name: "@elizaos-plugins/plugin-workshop-42blockchain",
-    description: "Plugin de démonstration pour le workshop 42 Blockchain",
-    actions: [getBalance],
-    providers: [],
-    evaluators: [],
-    services: [],
-    clients: [],
-    adapters: []
-};
-
-export { workshop42BlockchainPlugin as default };
-```
 
 ## Action de Balance (src/actions/getBalance.ts)
 
@@ -187,23 +207,6 @@ export const getBalanceExamples: ActionExample[][] = [
 ];
 ```
 
-## Points Clés à Retenir
-
-1. **Validation**
-   - Vérifiez toujours la validité des entrées
-   - Utilisez des regex pour la validation d'adresse
-
-2. **Gestion d'Erreurs**
-   - Implémentez une gestion d'erreurs robuste
-   - Fournissez des messages d'erreur clairs
-
-3. **State Management**
-   - Utilisez le state pour le contexte
-   - Mettez à jour le state de manière cohérente
-
-4. **Templates**
-   - Gardez les templates simples et clairs
-   - Utilisez des variables pour la personnalisation
 
 ## Prochaines Étapes
 
