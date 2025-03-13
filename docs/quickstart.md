@@ -61,6 +61,6 @@ Vous devriez recevoir une réponse contenant le solde du wallet.
 
 ## Prochaines Étapes
 
+- [🎭 Configurez votre agent ia](./character-config.md)
 - [📁 Découvrez la structure du plugin](./project-structure.md)
-- [🎭 Configurez votre character](./character-config.md)
 - [🔧 Implémentez votre premier plugin](./plugin-implementation.md) 
