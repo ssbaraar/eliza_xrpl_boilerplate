@@ -38,6 +38,12 @@ L'implémentation est divisée en plusieurs composants interconnectés :
 
 [📁 Reour au details de la structure du plugin au besoin](https://github.com/MathysCogne/workshop_elizaos_42blockchain/blob/ex/docs/project-structure.md)
 
+<br/>
+
+Acceder a chaque sous tuto:
+
+<br/>
+
 1. [🎯 Action getBalance](./implementation/action.md)
    - Structure complète de l'action
    - Validation des entrées
