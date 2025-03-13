@@ -12,6 +12,18 @@ Avant de commencer ce workshop, assurez-vous d'avoir installé :
 
 <br/>
 
+## ⚙️ Prérequis
+
+1. **Configuration de l'Environnement**
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Configuration du Provider AI**
+   Dans le fichier `.env`, ajoutez votre clé API:
+
+<br/>
+
 ## Installation
 
 1. **Clonez le repository**
