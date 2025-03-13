@@ -4,6 +4,8 @@
 
 
 Ce document détaille la configuration et l'utilisation des templates pour générer des réponses naturelles.
+
+
 📂 [Voir le code source](../../packages/plugin-workshop-42blockchain/src/examples/getBalanceExamples.ts)
 
 <br/>
@@ -108,12 +110,16 @@ Le processus de génération :
 4. Utilise `ModelClass.SMALL` pour l'efficacité
 
 
+<br/>
+
 ## Intégration avec les Exemples
 
 Les templates doivent être cohérents avec [les exemples](./examples.md) :
 - Style de langage similaire
 - Ton approprié
 - Format de réponse cohérent
+
+<br/>
 
 ## Liens Connexes
 
