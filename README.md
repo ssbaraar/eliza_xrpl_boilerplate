@@ -7,7 +7,9 @@ Bienvenue dans ce workshop qui vous guidera dans la création d'un plugin ElizaO
 ## ⚠️ Disclaimer
 
 Ce repo a été créé dans le cadre d'une présentation à 42 Paris avec l'association 42Blockchain.
+
 Le code présenté dans la documentation est parfois abrégé pour des raisons pédagogiques.
+
 Pour une compréhension complète, il est recommandé de consulter le code source complet dans le repository.
 
 <br/>
