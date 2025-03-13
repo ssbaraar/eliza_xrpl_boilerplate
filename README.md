@@ -2,6 +2,7 @@
 
 Bienvenue dans ce workshop qui vous guidera dans la création d'un plugin ElizaOS pour interroger le solde d'un wallet XRP.
 
+<br/>
 
 ## ⚠️ Disclaimer
 
@@ -9,6 +10,7 @@ Ce repo a été créé dans le cadre d'une présentation à 42 Paris avec l'asso
 Le code présenté dans la documentation est parfois abrégé pour des raisons pédagogiques.
 Pour une compréhension complète, il est recommandé de consulter le code source complet dans le repository.
 
+<br/>
 
 ## 💬 Support
 
@@ -16,6 +18,7 @@ Si vous avez des questions, même plus avancées que ce tutoriel de base, n'hés
 - Discord: mrmilkshakes
 - LinkedIn: [Mathys Cogné-Foucault](https://linkedin.com/in/mathys-cogne-foucault/)
 
+<br/>
 
 ## 📚 Structure de la doc
 
@@ -49,13 +52,7 @@ Laisser vous guidez en commencer par l'etape une.
    - Déploiement
    - Debugging
 
-## 🎯 Objectifs du Workshop
-
-À la fin de ce workshop, vous serez capable de :
-- Créer un plugin ElizaOS
-- Implémenter des actions personnalisées (Interagir avec une API externe)
-- Déployer et tester votre plugin
-
+<br/>
 
 ## ⭐⭐⭐
 
