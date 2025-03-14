@@ -14,6 +14,8 @@ Je vous invite a lire la documentation complete:
 
 Notre character file `characters/workshop.character.json` est configuré comme suit :
 
+Dites bonjour à Bob le Crypto !
+
 ```json
 {
     "name": "Bob le Crypto",
