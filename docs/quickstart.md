@@ -58,7 +58,7 @@ pnpm start --character="characters/workshop.character.json"
 
 <br/>
 
-## Vérification de l'Installation (Si vous avez installer la version final du plugin)
+## Vérification de l'Installation ((Si vous avez installé la version finale du plugin)
 
 Pour vérifier que tout fonctionne correctement, envoyer ces message a l'agent IA :
 ```
