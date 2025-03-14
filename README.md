@@ -10,7 +10,7 @@ Ce repo a été créé dans le cadre d'une présentation à 42 Paris avec l'asso
 
 Le code présenté dans la documentation est parfois abrégé pour des raisons pédagogiques.
 
-Pour une compréhension complète, il est recommandé de consulter le code source complet dans le repository.
+Pour une compréhension complète, il est recommandé de consulter le code source complet dans le repository ainsi que d'avoir assisté au workshop.
 
 <br/>
 
