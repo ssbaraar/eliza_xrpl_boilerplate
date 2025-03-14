@@ -1,8 +1,12 @@
 # 🎮 Service API XRP
 
+<br />
+
 📂 [Voir le code source](../../packages/plugin-workshop-42blockchain/src/services/getBalanceService.ts)
 
 Ce document détaille l'implémentation du service qui interagit avec l'API XRP Ledger.
+
+<br />
 
 ## Configuration de Base
 
@@ -10,7 +14,7 @@ Ce document détaille l'implémentation du service qui interagit avec l'API XRP 
 const BASE_URL = "https://s1.ripple.com:51234";
 ```
 
-Le service utilise l'API officielle XRP Ledger au lieu de XRPScan pour une meilleure fiabilité.
+<br />
 
 ## Implémentation du Service
 
@@ -59,6 +63,8 @@ export async function getBalanceService(address: string): Promise<string> {
 }
 ```
 
+<br />
+
 ## Détails de l'Implémentation
 
 ### 1. Construction de la Requête
@@ -78,11 +84,7 @@ const requestBody = {
 };
 ```
 
-#### Paramètres Importants
-- `method: 'account_info'` - Méthode RPC pour obtenir les informations du compte
-- `strict: true` - Assure une validation stricte de l'adresse
-- `ledger_index: 'current'` - Utilise toujours le dernier état du ledger
-- `queue: true` - Inclut les transactions en attente dans la réponse
+<br />
 
 ### 2. Appel API
 
@@ -100,25 +102,9 @@ const response = await fetch(url, {
 - Méthode POST requise pour l'API XRP Ledger
 - Headers appropriés pour JSON
 
-### 3. Validation de la Réponse
+<br />
 
-```typescript
-if (!response.ok) {
-    throw new Error(`Erreur HTTP ${response.status}`);
-}
 
-const data = await response.json();
-
-if (data.error || data.result?.error) {
-    const errorMessage = data.error_message || data.error || data.result?.error;
-    console.error("API Error:", errorMessage);
-    throw new Error(errorMessage);
-}
-```
-
-- Vérifie le statut HTTP
-- Parse la réponse JSON
-- Gère les erreurs spécifiques à l'API XRP
 
 ### 4. Conversion du Solde
 
@@ -130,42 +116,7 @@ const xrpBalance = Number(data.result.account_data.Balance) / 1000000;
 - 1 XRP = 1,000,000 drops
 - Conversion automatique pour l'affichage
 
-## Gestion des Erreurs
-
-Le service gère plusieurs types d'erreurs :
-
-1. **Erreurs HTTP**
-   ```typescript
-   if (!response.ok) {
-       throw new Error(`Erreur HTTP ${response.status}`);
-   }
-   ```
-
-2. **Erreurs API**
-   ```typescript
-   if (data.error || data.result?.error) {
-       const errorMessage = data.error_message || data.error || data.result?.error;
-       throw new Error(errorMessage);
-   }
-   ```
-
-3. **Erreurs de Parsing**
-   - Utilisation de try/catch dans [l'action principale](./action.md)
-   - Logging approprié des erreurs
-
-## Bonnes Pratiques
-
-1. **Validation**
-   - Validation de l'adresse avant l'appel
-   - Vérification des réponses API
-
-2. **Conversion**
-   - Conversion automatique drops -> XRP
-   - Format string pour éviter les problèmes de précision
-
-3. **Logging**
-   - Console.log pour le debugging
-   - Messages d'erreur clairs
+<br />
 
 ## Utilisation dans l'Action
 
@@ -175,6 +126,8 @@ Le service est utilisé dans [l'action getBalance](./action.md) :
 const xrpBalance = await getBalanceService(address);
 state.balance = xrpBalance;
 ```
+
+<br />
 
 ## Liens Connexes
 
