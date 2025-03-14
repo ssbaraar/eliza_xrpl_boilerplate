@@ -96,6 +96,10 @@ Pour plus de détails sur chaque composant, consultez les sections correspondant
 
 ## Prochaines Étapes
 
+((Avez-vous suivi les sous-tutos présents sur cette page ?))
+
 - [🧪 Test et Déploiement](./testing-deployment.md)
-- [🎭 Retour à la Configuration du Character](./character-config.md)
-- [📁 Retour à la Structure du Projet](./project-structure.md) 
+
+  <br/>
+
+  [retour a la home](../)
