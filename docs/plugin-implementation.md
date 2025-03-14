@@ -16,12 +16,14 @@ export const workshop42BlockchainPlugin: Plugin = {
     name: "@elizaos-plugins/plugin-workshop-42blockchain",
     description: "Plugin de démonstration pour le workshop 42 Blockchain",
     actions: [getBalance], // Action que l'on vas creer ensemble.
-    providers: [],
+    providers: [], 
     evaluators: [],
     services: [],
     clients: [],
     adapters: []
 };
+
+// Comme vous le voyez, aujourd'hui on s'arrête à définir une fonction personnalisée mais grâce à la modularité Elizaos on peut ajouter grâce au plugin tout ce que vous voyez ici !
 
 export { workshop42BlockchainPlugin as default };
 ```
