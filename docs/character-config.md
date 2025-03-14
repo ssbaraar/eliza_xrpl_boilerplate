@@ -143,6 +143,11 @@ Notre character file `characters/workshop.character.json` est configuré comme s
 
 ## 🔄 Prochaines Étapes
 
-- [🔧 Implémentation du Plugin](./plugin-implementation.md)
+
+- [📁 Découvrez la structure du plugin](./project-structure.md)
+- [🔧 Implémentez votre premier plugin](./plugin-implementation.md)
 - [🧪 Test et Déploiement](./testing-deployment.md)
-- [📁 Retour à la Structure du Projet](./project-structure.md) 
+
+  <br/>
+
+  [retour a la home](../)
