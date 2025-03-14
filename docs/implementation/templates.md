@@ -127,6 +127,7 @@ Les templates doivent être cohérents avec [les exemples](./examples.md) :
 - [🎮 Service API XRP](./service.md)
 - [📚 Exemples d'Utilisation](./examples.md)
 
+<br/>
   
 - [🎯 🔙 Retour à Action getBalance](./action.md)
 - [🔙 Retour à l'Implémentation Principale](../plugin-implementation.md) 
