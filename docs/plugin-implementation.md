@@ -40,7 +40,8 @@ L'implémentation est divisée en plusieurs composants interconnectés :
 
 <br/>
 
-Acceder a chaque sous tuto:
+### Accéder à chaque sous-tutoriel :
+
 
 <br/>
 
