@@ -2,7 +2,7 @@
 
 <br/>
 
-Le character file est un élément crucial qui définit la personnalité et le comportement de votre agent ElizaOS.
+Le character file est un élément crucial qui définit la personnalité et le comportement ainsi que sa configuration de base comme le provider a utriliser de votre agent ElizaOS.
 
 Je vous invite a lire la documentation complete:
 
