@@ -126,7 +126,15 @@ export const getBalance: Action = {
 
 ## Liens Connexes
 
+<br/>
 
+- [🧪 Test et Déploiement](./testing-deployment.md)
+
+<br/>
+
+- [🔙 Retour à l'Implémentation Principale](../plugin-implementation.md) 
+
+<br/>
 
 - [🎯 🔙 Retour à Action getBalance](./action.md)
 - [📝 🔙 Retour à Templates de Réponse](./templates.md)
