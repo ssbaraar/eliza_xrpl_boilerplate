@@ -33,15 +33,16 @@ Celle ci divisé en plusieurs sections pour une meilleure compréhension :
    - Installation
    - Premier lancement
 
-2. [📁 Structure du Projet](./docs/project-structure.md)
-   - Architecture du plugin
-   - Configuration TypeScript
-   - Organisation des fichiers
 
 3. [🎭 Configuration du Character](./docs/character-config.md)
    - Création du character file
    - Personnalisation du comportement
    - Exemples de configuration
+
+2. [📁 Structure du Projet](./docs/project-structure.md)
+   - Architecture du plugin
+   - Configuration TypeScript
+   - Organisation des fichiers
 
 4. [🔧 Implémentation du Plugin](./docs/plugin-implementation.md)
    - [🎯 Action getBalance](./docs/implementation/action.md)
