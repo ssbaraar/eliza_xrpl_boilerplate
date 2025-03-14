@@ -53,10 +53,16 @@ pnpm start --character="characters/workshop.character.json"
 
 Si ce workshop vous a été utile, n'hésitez pas à star ce repository !
 
+  [retour a la home](../)
+
+<br/>
+
+<br/>
+
 - [🚀 Retour à la Démarrage Rapide](./quickstart.md)
 - [📁 Retour à la Structure du Projet](./project-structure.md)
 - [🔧 Retour à l'Implémentation](./plugin-implementation.md)
 - [🎭 Retour à la Configuration du Character](./character-config.md)
 
 
-  [retour a la home](../)
+
