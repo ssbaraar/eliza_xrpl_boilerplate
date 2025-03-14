@@ -126,6 +126,9 @@ export const getBalance: Action = {
 
 ## Liens Connexes
 
+
+
 - [🎯 🔙 Retour à Action getBalance](./action.md)
 - [📝 🔙 Retour à Templates de Réponse](./templates.md)
+- [📝 🔙 Retour à Service API XRP](./service.md)
 - [🔙 Retour à l'Implémentation Principale](../plugin-implementation.md) 
