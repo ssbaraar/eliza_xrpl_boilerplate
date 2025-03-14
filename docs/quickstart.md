@@ -32,7 +32,7 @@ Avant de commencer ce workshop, assurez-vous d'avoir installé :
 # Version final du plugin
 git clone https://github.com/MathysCogne/workshop_elizaos_42blockchain
 
-# ou juste la struture du plugin vierge afin de pratiquer !
+# ou juste clone avec la struture du plugin vierge afin de pratiquer !
 git clone -b base https://github.com/MathysCogne/workshop_elizaos_42blockchain
 ```
 
