@@ -76,10 +76,10 @@ export default defineConfig({
 
 ## Prochaines Étapes
 
-- [🎭 Configuration du Character](./character-config.md)
-- [🔧 Implémentation du Plugin](./plugin-implementation.md)
+
+- [🔧 Implémentez votre premier plugin](./plugin-implementation.md)
 - [🧪 Test et Déploiement](./testing-deployment.md)
 
-<br/>
+  <br/>
 
-- [🔙 Retour à la racine](../../) 
+  [retour a la home](../)
