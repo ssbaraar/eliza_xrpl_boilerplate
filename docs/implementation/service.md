@@ -133,6 +133,7 @@ state.balance = xrpBalance;
 
 - [📚 Exemples d'Utilisation](./examples.md)
 
+<br />
 
 - [🎯 🔙 Retour à Action getBalance](./action.md)
 - [📝 🔙 Retour à Configuration des Templates](./templates.md)
