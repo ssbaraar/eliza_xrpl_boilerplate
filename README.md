@@ -26,7 +26,7 @@ Si vous avez des questions, même plus avancées que ce tutoriel de base, n'hés
 
 Celle ci divisé en plusieurs sections pour une meilleure compréhension :
 
-Laisser vous guidez en commencer par l'etape une.
+### Laissez-vous guider en commençant par l'étape une.
 
 1. [🚀 Démarrage Rapide](./docs/quickstart.md)
    - Prérequis
