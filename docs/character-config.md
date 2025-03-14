@@ -8,6 +8,9 @@ Je vous invite a lire la documentation complete:
 
 [Documentation officielle Character File plus complète](https://elizaos.github.io/eliza/docs/core/characterfile)
 
+
+# TODO add client / provider / rag details
+
 <br/>
 
 ## 📄 Structure du Character File
