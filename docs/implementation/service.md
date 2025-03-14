@@ -178,6 +178,9 @@ state.balance = xrpBalance;
 
 ## Liens Connexes
 
-- [🎯 Action getBalance](./action.md)
-- [📝 Templates de Réponse](./templates.md)
+- [📚 Exemples d'Utilisation](./examples.md)
+
+
+- [🎯 🔙 Retour à Action getBalance](./action.md)
+- [📝 🔙 Retour à Configuration des Templates](./templates.md)
 - [🔙 Retour à l'Implémentation Principale](../plugin-implementation.md) 
