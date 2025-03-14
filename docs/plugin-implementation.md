@@ -23,7 +23,8 @@ export const workshop42BlockchainPlugin: Plugin = {
     adapters: []
 };
 
-// Comme vous le voyez, aujourd'hui on s'arrête à définir une fonction personnalisée mais grâce à la modularité Elizaos on peut ajouter grâce au plugin tout ce que vous voyez ici !
+// Comme vous le voyez, aujourd'hui on s'arrête à définir une action personnalisée
+// mais grâce à la modularité Elizaos on peut ajouter des providers, des clients ect..
 
 export { workshop42BlockchainPlugin as default };
 ```
