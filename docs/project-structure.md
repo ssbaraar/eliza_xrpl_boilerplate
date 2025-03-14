@@ -1,5 +1,7 @@
 # 📁 Découvrez la structure du plugin
 
+<br/>
+
 ## Architecture du Plugin
 
 Voici l'architecture type d'un plugin ElizaOS :
@@ -18,6 +20,8 @@ plugin-workshop-42blockchain/
     ├── types.ts         # Définitions de types
     └── environment.ts   # Configuration d'environnement
 ```
+
+<br/>
 
 ## Configuration TypeScript
 
@@ -44,6 +48,8 @@ export default defineConfig({
 });
 ```
 
+<br/>
+
 ## Organisation des Fichiers
 
 ### 1. Services (src/services/)
@@ -66,8 +72,14 @@ export default defineConfig({
 - Configure et exporte le plugin
 - Déclare les actions, services et autres composants
 
+<br/>
+
 ## Prochaines Étapes
 
 - [🎭 Configuration du Character](./character-config.md)
 - [🔧 Implémentation du Plugin](./plugin-implementation.md)
-- [🧪 Test et Déploiement](./testing-deployment.md) 
+- [🧪 Test et Déploiement](./testing-deployment.md)
+
+<br/>
+
+- [🔙 Retour à la racine](../../) 
