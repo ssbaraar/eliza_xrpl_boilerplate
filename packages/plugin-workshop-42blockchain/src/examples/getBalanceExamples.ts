@@ -4,7 +4,7 @@ export const getBalanceExamples: ActionExample[][] = [
 	[
 		{
 			user: "{{user1}}",
-			content: { text: "Yo Bob, tu peux checker le wallet rNZ2ZVF1ZU34kFQvcN4xkFAvdSvve5bXce ?" }
+			content: { text: "Yo Bob, tu peux checker le wallet {walletXrpAddress} ?" }
 		},
 		{
 			user: "{{agent}}",
@@ -14,7 +14,7 @@ export const getBalanceExamples: ActionExample[][] = [
 	[
 		{
 			user: "{{user1}}",
-			content: { text: "Combien de XRP a rNZ2ZVF1ZU34kFQvcN4xkFAvdSvve5bXce ?" }
+			content: { text: "Combien de XRP a {walletXrpAddress} ?" }
 		},
 		{
 			user: "{{agent}}",
@@ -24,11 +24,21 @@ export const getBalanceExamples: ActionExample[][] = [
 	[
 		{
 			user: "{{user1}}",
-			content: { text: "Quel est le solde de rNZ2ZVF1ZU34kFQvcN4xkFAvdSvve5bXce stp" }
+			content: { text: `Quel est le solde de {walletXrpAddress} stp` }
 		},
 		{
 			user: "{{agent}}",
 			content: { text: "Carrément ! Je jette un œil aux XRP de ce wallet, deux secondes ! 🔥", action: "GET_BALANCE" }
+		}
+	],
+	[
+		{
+			user: "{{user1}}",
+			content: { text: "Il a combien sur cette adresse {walletXrpAddress}" }
+		},
+		{
+			user: "{{agent}}",
+			content: { text: "Je regarde ça pour vous, un instant ! 🔍", action: "GET_BALANCE" }
 		}
 	]
 ];

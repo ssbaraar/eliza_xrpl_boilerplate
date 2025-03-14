@@ -1,4 +1,4 @@
-const BASE_URL = "https://s1.ripple.com:51234";
+import { BASE_URL } from "../environment";
 
 export async function getBalanceService(address: string): Promise<string> {
 	const url = `${BASE_URL}`;

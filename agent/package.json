@@ -19,7 +19,6 @@
     },
     "dependencies": {
         "@elizaos-plugins/client-discord": "workspace:0.25.6-alpha.1",
-        "@elizaos-plugins/plugin-tee": "workspace:^",
         "@elizaos/client-direct": "workspace:*",
         "@elizaos/core": "workspace:*",
         "@elizaos/plugin-bootstrap": "workspace:*",

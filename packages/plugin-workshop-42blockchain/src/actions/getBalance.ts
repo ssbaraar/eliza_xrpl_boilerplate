@@ -28,7 +28,6 @@ export const getBalance: Action = {
 	description: "Récupère et affiche le solde XRP d'une adresse donnée sur le réseau Ripple",
 	// suppressInitialMessage: true, // Si on veux que l'agent n'affiche que la reponse generer par l'action
 	validate: async (runtime: IAgentRuntime, message: Memory) => {
-
 		// Vérifie si le message contient une adresse XRP
 		const text = message.content.text || '';
 		const addressMatch = text.match(/r[A-Za-z0-9]{24,34}/i);
