@@ -128,7 +128,7 @@ export const getBalance: Action = {
 
 <br/>
 
-- [🧪 Test et Déploiement](./testing-deployment.md)
+- [🧪 Test et Déploiement](../testing-deployment.md)
 
 <br/>
 
