@@ -6,7 +6,7 @@ Le character file est un élément crucial qui définit la personnalité et le c
 
 Je vous invite a lire la documentation complete:
 
-[Documentation Character File](https://elizaos.github.io/eliza/docs/core/characterfile)
+[Documentation officielle Character File plus complète](https://elizaos.github.io/eliza/docs/core/characterfile)
 
 <br/>
 
