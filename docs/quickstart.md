@@ -75,4 +75,9 @@ Vous devriez recevoir une réponse contenant le solde du wallet.
 
 - [🎭 Configurez votre agent ia](./character-config.md)
 - [📁 Découvrez la structure du plugin](./project-structure.md)
-- [🔧 Implémentez votre premier plugin](./plugin-implementation.md) 
+- [🔧 Implémentez votre premier plugin](./plugin-implementation.md)
+- [🧪 Test et Déploiement](./testing-deployment.md)
+
+  <br/>
+
+  [retour a la home](../)
