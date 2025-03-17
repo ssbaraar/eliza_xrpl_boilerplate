@@ -17,7 +17,7 @@ Pour une compréhension complète, il est recommandé de consulter le code sourc
 ## 💬 Support
 
 Si vous avez des questions, même plus avancées que ce tutoriel de base, n'hésitez pas à me contacter :
-- Discord: mrmilkshakes
+- Discord: mattcgn
 - LinkedIn: [Mathys Cogné-Foucault](https://linkedin.com/in/mathys-cogne-foucault/)
 
 <br/>
