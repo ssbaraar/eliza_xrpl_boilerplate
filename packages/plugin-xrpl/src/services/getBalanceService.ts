@@ -1,7 +1,8 @@
-import { BASE_URL } from "../environment";
+import { elizaLogger } from "@elizaos/core";
+import { CONFIG_KEYS } from "../environment";
 
 export async function getBalanceService(address: string): Promise<string> {
-	const url = `${BASE_URL}`;
+	const url = `${CONFIG_KEYS.XRPL_API_URL}`;
 	
 	const requestBody = {
 		method: 'account_info',
@@ -16,7 +17,7 @@ export async function getBalanceService(address: string): Promise<string> {
 		id: 1
 	};
 
-	// console.log("Request body:", JSON.stringify(requestBody, null, 2));
+	elizaLogger.log("Request body:", JSON.stringify(requestBody, null, 2));
 	
 	const response = await fetch(url, {
 		method: 'POST',
@@ -31,7 +32,7 @@ export async function getBalanceService(address: string): Promise<string> {
 	}
 
 	const data = await response.json();
-	// console.log("API Response:", JSON.stringify(data, null, 2));
+	elizaLogger.log("Réponse reçue:", JSON.stringify(data, null, 2));
 	
 	if (data.error || data.result?.error) {
 		const errorMessage = data.error_message || data.error || data.result?.error;

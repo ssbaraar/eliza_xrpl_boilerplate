@@ -1,10 +1,9 @@
 import { type Character, ModelProviderName } from "@elizaos/core";
-import discordClient from "@elizaos-plugins/client-discord";
 
 export const defaultCharacter: Character = {
     name: "Eliza",
     username: "eliza",
-    plugins: [discordClient],
+    plugins: [],
     modelProvider: ModelProviderName.GROQ,
     settings: {
         secrets: {},

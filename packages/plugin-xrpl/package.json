@@ -1,5 +1,5 @@
 {
-	"name": "@elizaos/plugin-workshop-42blockchain",
+	"name": "@elizaos/plugin-xrpl",
 	"version": "1.0.0",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -13,7 +13,8 @@
 	},
 	"dependencies": {
 		"@elizaos/core": "latest",
-		"xrpl": "^4.2.0"
+		"xrpl": "^4.2.0",
+		"zod": "^3.0.0"
 	},
 	"peerDependencies": {
 		"@elizaos/core": "^1.0.0"

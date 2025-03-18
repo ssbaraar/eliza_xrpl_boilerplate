@@ -8,15 +8,12 @@
         "forceConsistentCasingInFileNames": true,
         "allowImportingTsExtensions": true,
         "noEmit": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
     },
     "files": [],
     "references": [
         {
             "path": "packages/core"
         },
-        {
-            "path": "packages/client-slack"
-        }
     ]
 }

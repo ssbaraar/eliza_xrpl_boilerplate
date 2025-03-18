@@ -21,9 +21,9 @@ export const getBalance: Action = {
 		"CHECK_BALANCE",
 		"SHOW_BALANCE",
 		"BALANCE",
-		"SOLDE",
-		"VOIR_SOLDE",
-		"MONTRER_SOLDE"
+		"VIEW_BALANCE",
+		"GET_XRP_BALANCE",
+		"GET_XRP_AMOUNT"
 	],
 	description: "Récupère et affiche le solde XRP d'une adresse donnée sur le réseau Ripple",
 	// suppressInitialMessage: true, // Si on veux que l'agent n'affiche que la reponse generer par l'action
