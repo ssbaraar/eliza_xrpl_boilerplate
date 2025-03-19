@@ -50,5 +50,5 @@
 
 ## Configuration
 
-- `XRPL_SECRET`:
-- `XRPL_API_URL`: 
+- `XRPL_SECRET`: XRPL Wallet Private Key
+- `XRPL_API_URL`: XRPL Node URL (Testnet or Mainnet)

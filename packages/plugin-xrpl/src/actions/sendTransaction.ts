@@ -24,7 +24,8 @@ export const sendTransaction: Action = {
 		"TRANSFER",
 		"SEND_PAYMENT",
 		"MAKE_PAYMENT",
-		"TRANSACTION"
+		"TRANSACTION",
+		"SEND_XRP_TRANSACTION"
 	],
 	description: "Sends XRP from one address to another on the Ripple network",
 	validate: async (runtime: IAgentRuntime, message: Memory) => {

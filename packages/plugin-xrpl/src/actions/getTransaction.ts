@@ -24,7 +24,9 @@ export const getTransaction: Action = {
 		"CHECK_TRANSACTIONS",
 		"SHOW_TRANSACTIONS",
 		"LIST_TRANSACTIONS",
-		"TRANSACTION_HISTORY"
+		"TRANSACTION_HISTORY",
+		"VIEW_TRANSACTIONS",
+		"GET_XRP_TRANSACTIONS"
 	],
 	description: "Retrieve and display transaction history for a given XRP address with optional filters (count, start date, end date)",
 	validate: async (runtime: IAgentRuntime, message: Memory) => {

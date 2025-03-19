@@ -80,7 +80,9 @@
         "xrp_balances",
         "xrp_transactions",
         "xrp_blockchain",
-        "data_analysis"
+        "data_analysis",
+        "xrp_nfts",
+        "xrp_ledger_structure"
     ],
     "style": {
         "all": [

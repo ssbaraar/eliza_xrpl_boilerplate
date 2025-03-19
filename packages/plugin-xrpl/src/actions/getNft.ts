@@ -22,7 +22,8 @@ export const getNft: Action = {
 		"NFT_DETAILS",
 		"CHECK_NFT",
 		"VIEW_NFT",
-		"SHOW_NFT"
+		"SHOW_NFT",
+		"GET_NFT_DETAILS"
 	],
 	description: "Gets details about an NFT on the XRP Ledger",
 
