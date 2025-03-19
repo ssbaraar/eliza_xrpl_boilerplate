@@ -1,63 +1,54 @@
-# 🤖 ElizaOS - Workshop 42Blockchain
+# XRPL Plugin for Eliza
 
-Bienvenue dans ce workshop qui vous guidera dans la création d'un plugin ElizaOS pour interroger le solde d'un wallet XRP.
+## Features
 
-<br/>
+### Transactions
+- Send XRP between accounts
+  ```
+  Send 10 XRP to rUCzEr6jrEyMpjXRyhtKijXeNFqEJMbC8X
+  ```
+  or
+  ```
+  Send 10 XRP from rNczJQ1ZnJb8KyaTpdcTPfjgWKor8P8MN3 to rUCzEr6jrEyMpjXRyhtKijXeNFqEJMbC8X
+  ```
 
-## ⚠️ Disclaimer
+### NFT Operations
+- Create NFT
+  ```
+  Create an NFT on rNczJQ1ZnJb8KyaTpdcTPfjgWKor8P8MN3 with URI https://example.com/metadata.json
+  ```
+  Additional options:
+  - Transfer fee: `with 2% transfer fee`
+  - Burnable flag: `not burnable`
+  - Transferable flag: `not transferable`
 
-Ce repo a été créé dans le cadre d'une présentation à 42 Paris avec l'association 42Blockchain.
+- Get NFT Details
+  ```
+  Show me the details of NFT 0000000095680690F8F2D01B202320A2C60425B757588880DFE0A1700057B2D5
+  ```
+  Returns:
+  - Token ID
+  - URI
+  - Owner
+  - Transfer Fee
+  - Serial Number
+  - Flags
+  - Taxon
 
-Le code présenté dans la documentation est parfois abrégé pour des raisons pédagogiques.
+### Account Information
+- Get Account Balance
+  ```
+  What's the balance of rNczJQ1ZnJb8KyaTpdcTPfjgWKor8P8MN3
+  ```
 
-Pour une compréhension complète, il est recommandé de consulter le code source complet dans le repository ainsi que d'avoir assisté au workshop.
-
-<br/>
-
-## 💬 Support
-
-Si vous avez des questions, même plus avancées que ce tutoriel de base, n'hésitez pas à me contacter :
-- Discord: mattcgn
-- LinkedIn: [Mathys Cogné-Foucault](https://linkedin.com/in/mathys-cogne-foucault/)
-
-<br/>
-
-## 📚 Structure de la doc
-
-Celle ci divisé en plusieurs sections pour une meilleure compréhension :
-
-### Laissez-vous guider en commençant par l'étape une.
-
-1. [🚀 Démarrage Rapide](./docs/quickstart.md)
-   - Prérequis
-   - Installation
-   - Premier lancement
+- Get Transaction History
+  ```
+  Show me the last 5 transactions for rNczJQ1ZnJb8KyaTpdcTPfjgWKor8P8MN3
+  ```
 
 
-3. [🎭 Configuration du Character](./docs/character-config.md)
-   - Création du character file
-   - Personnalisation du comportement
-   - Exemples de configuration
 
-2. [📁 Structure du Projet](./docs/project-structure.md)
-   - Architecture du plugin
-   - Configuration TypeScript
-   - Organisation des fichiers
+## Configuration
 
-4. [🔧 Implémentation du Plugin](./docs/plugin-implementation.md)
-   - [🎯 Action getBalance](./docs/implementation/action.md)
-   - [🎮 Service API XRP](./docs/implementation/service.md)
-   - [📝 Templates de Réponse](./docs/implementation/templates.md)
-   - [📚 Exemples d'Utilisation](./docs/implementation/examples.md)
-
-5. [🧪 Test et Déploiement](./docs/testing-deployment.md)
-   - Build du projet
-   - Tests
-   - Déploiement
-   - Debugging
-
-<br/>
-
-## ⭐⭐⭐
-
-Si ce workshop vous a été utile, n'hésitez pas à star ce repository !
+- `XRPL_SECRET`:
+- `XRPL_API_URL`: 

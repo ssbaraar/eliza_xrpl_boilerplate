@@ -4,7 +4,7 @@ export const getBalanceExamples: ActionExample[][] = [
 	[
 		{
 			user: "{{user1}}",
-			content: { text: "Yo Bob, can you check the wallet {walletXrpAddress}?" }
+			content: { text: "" }
 		},
 		{
 			user: "{{agent}}",

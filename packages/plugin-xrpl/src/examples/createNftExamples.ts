@@ -4,6 +4,16 @@ export const createNftExamples: ActionExample[][] = [
   [
     {
       user: "{{user1}}",
+      content: { text: "Create an NFT with URI https://example.com/metadata.json" }
+    },
+    {
+      user: "{{agent}}",
+      content: { text: "I'll create that NFT for you right away! 🚀", action: "CREATE_NFT" }
+    }
+  ],
+  [
+    {
+      user: "{{user1}}",
       content: { text: "Create an NFT on {walletXrpAddress} with URI https://example.com/metadata.json" }
     },
     {

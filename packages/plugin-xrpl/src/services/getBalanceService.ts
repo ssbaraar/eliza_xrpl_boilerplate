@@ -1,49 +1,36 @@
 import { elizaLogger } from "@elizaos/core";
-import { CONFIG_KEYS } from "../environment";
+import { AccountInfoResponse, dropsToXrp } from "xrpl";
+import { xrplClient } from "./lib/xrplClient";
 
 export async function getBalanceService(address: string): Promise<string> {
-	const url = `${CONFIG_KEYS.XRPL_API_URL}`;
-	
-	const requestBody = {
-		method: 'account_info',
-		params: [
-			{
-				account: address,
-				strict: true,
-				ledger_index: 'current',
-				queue: true
-			}
-		],
-		id: 1
-	};
+	try {
+		const client = await xrplClient.getClient();
+		elizaLogger.log("Using XRPL client");
 
-	elizaLogger.log("Request body:", JSON.stringify(requestBody, null, 2));
-	
-	const response = await fetch(url, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(requestBody)
-	});
+		const response = await client.request({
+			command: "account_info",
+			account: address,
+			ledger_index: "validated"
+		});
 
-	if (!response.ok) {
-		throw new Error(`Erreur HTTP ${response.status}`);
+		elizaLogger.log("Received response:", JSON.stringify(response, null, 2));
+		
+		// Type assertion to handle potential error response
+		const result = response.result as AccountInfoResponse["result"] & { error?: string; error_message?: string };
+		
+		if (result.error) {
+			const errorMessage = result.error_message || result.error;
+			elizaLogger.error("API Error:", errorMessage);
+			throw new Error(errorMessage);
+		}
+
+		// Convert drops to XRP using XRPL's official conversion method
+		const xrpBalance = dropsToXrp(result.account_data.Balance);
+		elizaLogger.log("XRP Balance:", xrpBalance);
+
+		return xrpBalance.toString();
+	} catch (error) {
+		elizaLogger.error("Error getting balance:", error);
+		throw error;
 	}
-
-	const data = await response.json();
-	elizaLogger.log("Réponse reçue:", JSON.stringify(data, null, 2));
-	
-	if (data.error || data.result?.error) {
-		const errorMessage = data.error_message || data.error || data.result?.error;
-		console.error("API Error:", errorMessage);
-		throw new Error(errorMessage);
-	}
-
-	// Convertir le solde XRP (en drops) en XRP (1 XRP = 1,000,000 drops)
-	const xrpBalance = Number(data.result.account_data.Balance) / 1000000;
-	console.log("XRP Balance:", xrpBalance);
-
-
-	return xrpBalance.toString();
 }

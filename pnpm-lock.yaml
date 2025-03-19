@@ -587,6 +587,9 @@ importers:
       xrpl:
         specifier: ^4.2.0
         version: 4.2.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      zod:
+        specifier: ^3.0.0
+        version: 3.24.2
     devDependencies:
       '@types/node':
         specifier: ^20.0.0

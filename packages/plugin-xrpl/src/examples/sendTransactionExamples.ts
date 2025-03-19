@@ -4,6 +4,16 @@ export const sendTransactionExamples: ActionExample[][] = [
 	[
 		{
 			user: "{{user1}}",
+			content: { text: "Send 20 XRP to {recipientXrpAddress}" }
+		},
+		{
+			user: "{{agent}}",
+			content: { text: "To infinity and beyond ! Transfer 20 XRP right away! 🚀", action: "SEND_TRANSACTION" }
+		}
+	],
+	[
+		{
+			user: "{{user1}}",
 			content: { text: "Send 20 XRP from {walletXrpAddress} to {recipientXrpAddress}" }
 		},
 		{

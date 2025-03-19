@@ -12,7 +12,7 @@ import {
     stringToUuid
 } from "@elizaos/core";
 import { createNftService } from "../services/createNftService";
-import { createNftExamples } from "../examples/creteNftExamples";
+import { createNftExamples } from "../examples/createNftExamples";
 import { formatNftCreationTemplate } from "../templates";
 
 export const createNft: Action = {
@@ -70,13 +70,13 @@ handler: async (
     console.log(`Creating NFT on address ${issuerAddress} with URI ${tokenURI}`);
 
     // Call the service to create the NFT
-    const nftResult = await createNftService(
-        issuerAddress, 
-        tokenURI, 
-        transferFee, 
-        isBurnable, 
+    const nftResult = await createNftService({
+        issuerAddress,
+        tokenURI,
+        transferFee,
+        isBurnable,
         isTransferable
-    );
+    });
     
     console.log(`NFT created successfully with ID: ${nftResult.tokenId}`);
 

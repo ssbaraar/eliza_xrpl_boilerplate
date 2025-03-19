@@ -20,15 +20,11 @@ export const getBalance: Action = {
 	similes: [
 		"CHECK_BALANCE",
 		"SHOW_BALANCE",
-		"BALANCE",
-		"VIEW_BALANCE",
-		"GET_XRP_BALANCE",
-		"GET_XRP_AMOUNT"
+		"BALANCE"
 	],
-	description: "Récupère et affiche le solde XRP d'une adresse donnée sur le réseau Ripple",
-	// suppressInitialMessage: true, // Si on veux que l'agent n'affiche que la reponse generer par l'action
+	description: "Retrieve and display the XRP balance of a given address on the Ripple network",
+	// Validate the message to check if it contains an XRP address
 	validate: async (runtime: IAgentRuntime, message: Memory) => {
-		// Vérifie si le message contient une adresse XRP
 		const text = message.content.text || '';
 		const addressMatch = text.match(/r[A-Za-z0-9]{24,34}/i);
 		if (!addressMatch) {
@@ -45,39 +41,36 @@ export const getBalance: Action = {
 		callback: HandlerCallback
 	) => {
 		try {
-			// Récupérer l'adresse XRP dans le message
+			// Extract addresses from the message
 			const text = message.content.text || '';
 			const addressMatch = text.match(/r[A-Za-z0-9]{24,34}/i);
 			if (!addressMatch) {
 				return false;
 			}
 			const address = addressMatch[0];
-			console.log(`Recherche du solde pour l'adresse: ${address}`);
+			elizaLogger.log(`Searching for balance for address: ${address}`);
 
-			// Fetch API pour récupérer le solde
+			// Pass runtime to the service
 			const xrpBalance = await getBalanceService(address);
-			console.log(`Solde récupéré avec succès pour ${address}`);
 
-			// Mettre à jour le state avec l'adresse et le solde
+			// Update the state with the address and balance
 			state.address = address;
 			state.balance = xrpBalance;
 			state.currency = "XRP";
-			// On compose le contexte pour la génération de texte avec le state (Donc avec l'adresse et le solde)
+			// Compose the context for text generation with the state (So with the address and balance)
 			const context = composeContext({
 				state,
 				template: formatBalanceTemplate
 			});
 
-			// Générer la reponse avec le contexte
+			// Generate the response with the context
 			const formattedResponse = await generateText({
 				runtime,
 				context,
 				modelClass: ModelClass.SMALL
 			});
 
-			// Log la reponse
-			// Enregistrer notre message dans l'historique pour pas perdre le contexte
-			// (Pour que l'agent puisse continuer la conversation, sans tourner en rond sur notre demande initiale)
+			// Create memory of this action
 			await runtime.messageManager.createMemory({
 				id: stringToUuid(Date.now().toString()),
 				content: { text: formattedResponse },
@@ -87,7 +80,7 @@ export const getBalance: Action = {
 			});
 
 
-			// Envoie du message generer par l'action.
+			// Send the generated message
 			if (callback) {
 				callback({
 					text: formattedResponse,
@@ -98,10 +91,10 @@ export const getBalance: Action = {
 			return true;
 
 		} catch (error: any) {
-			elizaLogger.error("Erreur dans le handler du plugin XRP:", error);
+			elizaLogger.error("Error in the XRP plugin handler:", error);
 			if (callback) {
 				callback({
-					text: `Une erreur est survenue lors de la récupération du solde. Veuillez réessayer plus tard.`
+					text: `An error occurred while retrieving the balance. Please try again later. ${error}`
 				});
 			}
 			return false;
