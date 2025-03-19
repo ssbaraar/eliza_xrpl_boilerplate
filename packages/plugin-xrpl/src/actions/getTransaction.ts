@@ -15,6 +15,7 @@ import { getTransactionService } from "../services/getTransactionService";
 import { getTransactionExamples } from "../examples/getTransactionExamples";
 import { formatDate } from "../utils/formatDate";
 import { formatGetTransactionTemplate } from "../templates";
+import { walletService } from "../services/lib/walletService";
 
 
 
@@ -30,11 +31,6 @@ export const getTransaction: Action = {
 	],
 	description: "Retrieve and display transaction history for a given XRP address with optional filters (count, start date, end date)",
 	validate: async (runtime: IAgentRuntime, message: Memory) => {
-		const text = message.content.text || '';
-		const addressMatch = text.match(/r[A-Za-z0-9]{24,34}/i);
-		if (!addressMatch) {
-			return false;
-		}
 		return true;
 	},
 	handler: async (
@@ -47,12 +43,9 @@ export const getTransaction: Action = {
 		try {
 			const text = message.content.text || '';
 			
-			// Extract address
+			// Extract address or use wallet address
 			const addressMatch = text.match(/r[A-Za-z0-9]{24,34}/i);
-			if (!addressMatch) {
-				return false;
-			}
-			const address = addressMatch[0];
+			const address = addressMatch ? addressMatch[0] : walletService.getWallet().address;
 			
 			// Extract transaction count if present
 			const countMatch = text.match(/(\d+)\s*(transactions?|tx)/i);

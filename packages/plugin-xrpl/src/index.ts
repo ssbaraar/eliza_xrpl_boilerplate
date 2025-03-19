@@ -1,10 +1,9 @@
 import { type Plugin } from "@elizaos/core";
 
-import createNft from "./actions/createNFT";
+import { createNft, getNft, burnNft } from "./actions/NFT";
 import getBalance from "./actions/getBalance";
-import sendTransaction from "./actions/sendTransaction";
 import getTransaction from "./actions/getTransaction";
-import getNft from "./actions/getNft";
+import sendTransaction from "./actions/sendTransaction";
 
 export const xrplPlugin: Plugin = {
 	name: "@elizaos-plugins/plugin-xrpl",
@@ -12,10 +11,11 @@ export const xrplPlugin: Plugin = {
 	config: [],
 	actions: [
 		createNft,
+		getNft,
+		burnNft,
 		getBalance,
 		getTransaction,
 		sendTransaction,
-		getNft,
 	],
 	providers: [],
 	evaluators: [],

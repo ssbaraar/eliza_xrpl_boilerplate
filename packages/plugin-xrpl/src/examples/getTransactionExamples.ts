@@ -4,6 +4,16 @@ export const getTransactionExamples: ActionExample[][] = [
 	[
 		{
 			user: "{{user1}}",
+			content: { text: "Show me the last transactions" }
+		},
+		{
+			user: "{{agent}}",
+			content: { text: "I'll fetch the last transactions ! 🔍", action: "GET_TRANSACTION" }
+		}
+	],
+	[
+		{
+			user: "{{user1}}",
 			content: { text: "Show me the last {transactionCount} transactions for wallet {walletXrpAddress}" }
 		},
 		{

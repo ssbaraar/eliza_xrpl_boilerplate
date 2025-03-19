@@ -11,9 +11,9 @@ import {
 	composeContext,
 	stringToUuid
 } from "@elizaos/core";
-import { createNftService } from "../services/createNftService";
-import { createNftExamples } from "../examples/createNftExamples";
-import { formatNftCreationTemplate } from "../templates";
+import { createNftService } from "../../services/NFT/createNftService";
+import { createNftExamples } from "../../examples/NFT/createNftExamples";
+import { formatNftCreationTemplate } from "../../templates";
 
 export const createNft: Action = {
 name: "CREATE_NFT",

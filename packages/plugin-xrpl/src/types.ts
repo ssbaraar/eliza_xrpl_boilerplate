@@ -40,6 +40,21 @@ interface NFTDetails {
 	transferFee: number;
 	serialNumber: number;
 	taxon: number;
+	mintDate: string;
+}
+
+interface NFTParams {
+	tokenId?: string;
+	address?: string;
+	count?: number;
+	startDate?: string;
+	endDate?: string;
+}
+
+interface NFTMintTransaction extends Transaction {
+	meta?: {
+		nftoken_id?: string;
+	};
 }
 
 interface NFTMintOptions {

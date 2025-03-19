@@ -1,6 +1,6 @@
 import { elizaLogger } from "@elizaos/core";
-import { xrplClient } from "./lib/xrplClient";
-import { walletService } from "./lib/walletService";
+import { xrplClient } from "../lib/xrplClient";
+import { walletService } from "../lib/walletService";
 
 
 /**

@@ -1,8 +1,11 @@
 import { elizaLogger } from "@elizaos/core";
 import { dropsToXrp } from "xrpl";
 import { xrplClient } from "./lib/xrplClient";
+import { walletService } from "./lib/walletService";
 
-
+const DEFAULT_COUNT_TRANSACTIONS = 15;
+// Ripple epoch is January 1st, 2000 00:00:00 UTC
+const RIPPLE_EPOCH_OFFSET = 946684800;
 
 export async function getTransactionService({ 
 	address, 
@@ -14,10 +17,13 @@ export async function getTransactionService({
 		const client = await xrplClient.getClient();
 		elizaLogger.log("Using XRPL client");
 
+		// If no address provided, use wallet address
+		const useAddress = address || walletService.getWallet().address;
+
 		const response = await client.request({
 			command: "account_tx",
-			account: address,
-			limit: transactionCount || 5,
+			account: useAddress,
+			limit: transactionCount || DEFAULT_COUNT_TRANSACTIONS,
 			ledger_index_min: -1,
 			ledger_index_max: -1
 		});
@@ -48,10 +54,16 @@ export async function getTransactionService({
 						? dropsToXrp(tx.tx_json.DeliverMax).toString()
 						: "0";
 
+				elizaLogger.log("Raw transaction date:", tx.tx_json.date);
+				// Convert XRPL timestamp (seconds since Ripple epoch) to JS timestamp (milliseconds since Unix epoch)
+				const date = new Date((tx.tx_json.date + RIPPLE_EPOCH_OFFSET) * 1000);
+				elizaLogger.log("Converted date:", date.toISOString());
+
 				return {
 					type: tx.tx_json.TransactionType,
 					hash: tx.hash,
-					date: new Date(tx.tx_json.date * 1000).toISOString(),
+					date: date.toISOString(),
+					meta: tx.meta,
 					amount: amount,
 					from: tx.tx_json.Account,
 					to: tx.tx_json.Destination,

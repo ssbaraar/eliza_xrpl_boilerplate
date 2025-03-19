@@ -1,5 +1,12 @@
 # XRPL Plugin for Eliza
 
+
+## Configuration
+
+- `XRPL_SECRET`: XRPL Wallet Private Key
+- `XRPL_API_URL`: XRPL Node URL (Testnet or Mainnet)
+
+
 ## Features
 
 ### Transactions
@@ -26,14 +33,12 @@
   ```
   Show me the details of NFT 0000000095680690F8F2D01B202320A2C60425B757588880DFE0A1700057B2D5
   ```
-  Returns:
-  - Token ID
-  - URI
-  - Owner
-  - Transfer Fee
-  - Serial Number
-  - Flags
-  - Taxon
+    Additional options:
+  - Count
+  - Date (Start and End)
+  - NftId
+
+
 
 ### Account Information
 - Get Account Balance
@@ -43,12 +48,13 @@
 
 - Get Transaction History
   ```
-  Show me the last 5 transactions for rNczJQ1ZnJb8KyaTpdcTPfjgWKor8P8MN3
+  Show me the last transactions 
   ```
+  Additional options:
+  - Count 
+  - Date (Start and End)
+  - Addr
 
 
 
-## Configuration
 
-- `XRPL_SECRET`: XRPL Wallet Private Key
-- `XRPL_API_URL`: XRPL Node URL (Testnet or Mainnet)
