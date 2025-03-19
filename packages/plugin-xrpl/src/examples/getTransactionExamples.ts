@@ -31,6 +31,7 @@ export const getTransactionExamples: ActionExample[][] = [
 			content: { text: "I'll look up all transactions since {startDate} for this wallet. 🔎", action: "GET_TRANSACTION" }
 		}
 	],
+	
 	[
 		{
 			user: "{{user1}}",

@@ -13,18 +13,9 @@ import {
 } from "@elizaos/core";
 import { getTransactionService } from "../services/getTransactionService";
 import { getTransactionExamples } from "../examples/getTransactionExamples";
+import { formatDate } from "../utils/formatDate";
 import { formatGetTransactionTemplate } from "../templates";
 
-function formatDate(dateString: string): string {
-	const date = new Date(dateString);
-	return date.toLocaleString('en-US', {
-		year: 'numeric',
-		month: 'short',
-		day: 'numeric',
-		hour: '2-digit',
-		minute: '2-digit'
-	});
-}
 
 
 export const getTransaction: Action = {
