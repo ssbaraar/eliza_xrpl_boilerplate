@@ -27,8 +27,8 @@ export async function createNftService(
 
 		// Convert transfer fee to proper format (e.g., 10% = 10000) if provided
 		const formattedTransferFee = options.transferFee !== undefined 
-			? Math.min(Math.max(Math.floor(options.transferFee * 1000), 0), 50000)
-			: 0.2;
+		? Math.min(Math.max(Math.floor(options.transferFee * 100), 0), 50000)
+		: 0; // Default to 0 if not provided
 
 		// Get initial NFT count
 		const initialNfts = await client.request({
