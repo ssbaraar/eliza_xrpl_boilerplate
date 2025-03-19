@@ -20,9 +20,11 @@ export const getBalance: Action = {
 	similes: [
 		"CHECK_BALANCE",
 		"SHOW_BALANCE",
-		"BALANCE"
+		"BALANCE",
+		"GET_XRP_BALANCE",
+		"VIEW_XRP_BALANCE"
 	],
-	description: "Retrieve and display the XRP balance of a given address on the Ripple network",
+	description: "Retrieve and display the XRP balance of a given address on the XRP Ledger network",
 	// Validate the message to check if it contains an XRP address
 	validate: async (runtime: IAgentRuntime, message: Memory) => {
 		const text = message.content.text || '';

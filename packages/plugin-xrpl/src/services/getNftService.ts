@@ -2,6 +2,17 @@ import { elizaLogger } from "@elizaos/core";
 import { xrplClient } from "./lib/xrplClient";
 import { walletService } from "./lib/walletService";
 
+// Define the NFTDetails type
+interface NFTDetails {
+	tokenId: string;
+	uri: string;
+	owner: string;
+	flags: number;
+	transferFee: number;
+	serialNumber: number;
+	taxon: number;
+}
+
 
 /**
  * Service to get NFT details from the XRP Ledger

@@ -1,6 +1,4 @@
-import { elizaLogger } from "@elizaos/core";
 import { xrpToDrops } from "xrpl";
-import { CONFIG_KEYS } from "../environment";
 import { xrplClient } from "./lib/xrplClient";
 import { walletService } from "./lib/walletService";
 
