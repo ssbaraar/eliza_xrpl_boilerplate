@@ -152,6 +152,9 @@ importers:
       '@elizaos/plugin-bootstrap':
         specifier: workspace:*
         version: link:../packages/plugin-bootstrap
+      '@elizaos/plugin-xrpl':
+        specifier: workspace:*
+        version: link:../packages/plugin-xrpl
       '@types/node':
         specifier: ^22.13.5
         version: 22.13.5

@@ -1,7 +1,7 @@
 {
     "name": "Bob, the XRP expert 19",
     "clients": [],
-    "modelProvider": "groq",
+    "modelProvider": "google",
     "settings": {
         "voice": {},
         "ragKnowledge": true
